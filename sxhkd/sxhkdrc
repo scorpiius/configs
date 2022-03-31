@@ -1,0 +1,44 @@
+super + Escape
+	pkill -USR1 -x sxhkd
+
+super + w
+      yandex-browser-beta
+
+super + e
+      emacs
+
+super + t
+      telegram-desktop
+
+super + s
+      steam
+
+super + m
+      ymp
+
+super + d
+      rofi -show drun
+
+Print
+      flameshot gui
+
+super + Print
+      flameshot full -c
+XF86MonBrightnessUp
+      brightnessctl s +10%
+XF86MonBrightnessDown
+      brightnessctl s 10%-
+XF86AudioRaiseVolume
+      amixer set Master 5%+
+XF86AudioLowerVolume
+      amixer set Master 5%-
+XF86AudioMute
+      amixer -q set Master toggle
+ XF86AudioPlay
+      playerctl play-pause
+XF86AudioNext
+      playerctl next
+XF86AudioPrev
+      playerctl previous
+XF86AudioStop
+      playerctl stop
