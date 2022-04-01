@@ -227,7 +227,9 @@ awful.rules.rules = {
                      placement = awful.placement.no_overlap+awful.placement.no_offscreen
      }
     },
-
+{ rule = { class = "Xfce4-panel" },
+  properties = {border_width = 0},
+},
     -- Floating clients.
     { rule_any = {
         instance = {
