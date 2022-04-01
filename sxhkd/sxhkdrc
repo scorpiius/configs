@@ -13,6 +13,9 @@ super + t
 super + s
       steam
 
+super + shift + Return
+      thunar
+
 super + m
       ymp
 
