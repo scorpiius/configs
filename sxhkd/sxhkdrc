@@ -16,6 +16,12 @@ super + s
 super + shift + Return
       thunar
 
+super + p
+      picom --config .config/awesome/picom.conf
+
+super + shift + p
+      killall picom
+
 super + m
       ymp
 
