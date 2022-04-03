@@ -301,6 +301,9 @@ client.connect_signal("focus", function(c) c.border_color = beautiful.border_foc
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 
 -- }}}
+
+awful.screen.padding(screen[1], { top = 35 })
+
 beautiful.useless_gap = 8
 beautiful.border_normal = "#666666"
 beautiful.border_focus = "#b78ff2"
