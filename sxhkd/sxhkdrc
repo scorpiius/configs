@@ -2,7 +2,7 @@ super + Escape
 	pkill -USR1 -x sxhkd
 
 super + w
-      yandex-browser-beta
+      yandex-browser-stable
 
 super + e
       emacs
@@ -14,7 +14,7 @@ super + s
       steam
 
 super + shift + Return
-      thunar
+      spacefm
 
 super + p
       picom --config .config/awesome/picom.conf
@@ -26,28 +26,33 @@ super + m
       ymp
 
 super + d
-      rofi -show drun
+      rofi -modi drun,run -show drun -sidebar-mode -show-icons
 
 Print
       flameshot gui
 
 super + Print
       flameshot full -c
-XF86MonBrightnessUp
-      brightnessctl s +10%
-XF86MonBrightnessDown
-      brightnessctl s 10%-
-XF86AudioRaiseVolume
-      amixer set Master 5%+
-XF86AudioLowerVolume
-      amixer set Master 5%-
-XF86AudioMute
-      amixer -q set Master toggle
- XF86AudioPlay
-      playerctl play-pause
-XF86AudioNext
-      playerctl next
-XF86AudioPrev
-      playerctl previous
-XF86AudioStop
-      playerctl stop
+
+super + shift + Escape
+      xkill
+
+
+#XF86MonBrightnessUp
+#      brightnessctl s +10%
+#XF86MonBrightnessDown
+#      brightnessctl s 10%-
+#XF86AudioRaiseVolume
+#      amixer set Master 5%+
+#XF86AudioLowerVolume
+#      amixer set Master 5%-
+#XF86AudioMute
+#      amixer -q set Master toggle
+# XF86AudioPlay
+#      playerctl play-pause
+#XF86AudioNext
+#      playerctl next
+#XF86AudioPrev
+#      playerctl previous
+#XF86AudioStop
+#      playerctl stop
