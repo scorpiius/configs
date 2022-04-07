@@ -158,10 +158,21 @@ clientkeys = gears.table.join(
 -- Bind all key numbers to tags.
 -- Be careful: we use keycodes to make it work on any keyboard layout.
 -- This should map on the top row of your keyboard, usually 1 to 9.
+local np_map = { 87, 88, 89, 83, 84, 85, 79, 80, 81 }
+
 for i = 1, 9 do
     globalkeys = gears.table.join(globalkeys,
         -- View tag only.
         awful.key({ modkey }, "#" .. i + 9,
+                  function ()
+                        local screen = awful.screen.focused()
+                        local tag = screen.tags[i]
+                        if tag then
+                           tag:view_only()
+                        end
+                  end,
+                  {description = "view tag #"..i, group = "tag"}),
+        awful.key({ modkey }, "#" .. np_map[i],
                   function ()
                         local screen = awful.screen.focused()
                         local tag = screen.tags[i]
@@ -180,8 +191,27 @@ for i = 1, 9 do
                       end
                   end,
                   {description = "toggle tag #" .. i, group = "tag"}),
+        awful.key({ modkey, "Control" }, "#" .. np_map[i],
+                  function ()
+                      local screen = awful.screen.focused()
+                      local tag = screen.tags[i]
+                      if tag then
+                         awful.tag.viewtoggle(tag)
+                      end
+                  end,
+                  {description = "toggle tag #" .. i, group = "tag"}),
         -- Move client to tag.
         awful.key({ modkey, "Shift" }, "#" .. i + 9,
+                  function ()
+                      if client.focus then
+                          local tag = client.focus.screen.tags[i]
+                          if tag then
+                              client.focus:move_to_tag(tag)
+                          end
+                     end
+                  end,
+                  {description = "move focused client to tag #"..i, group = "tag"}),
+        awful.key({ modkey, "Shift" }, "#" .. np_map[i],
                   function ()
                       if client.focus then
                           local tag = client.focus.screen.tags[i]
@@ -193,6 +223,33 @@ for i = 1, 9 do
                   {description = "move focused client to tag #"..i, group = "tag"})
     )
 end
+
+-- List of keys from the numpad
+--local np_map = { 87, 88, 89, 83, 84, 85, 79, 80, 81 }
+--
+--for i = 1, 9 do
+--	globalkeys = awful.util.table.join(globalkeys,
+--		-- View tag only.
+--		awful.key({ modkey }, "#" .. i + 9,
+--				  function ()
+--						local screen = awful.screen.focused()
+--						local tag = screen.tags[i]
+--						if tag then
+--						   tag:view_only()
+--						end
+--				  end,
+--				  {description = "view tag #"..i, group = "tag"}),
+--		awful.key({ modkey }, "#" .. np_map[i],
+--				  function ()
+--						local screen = awful.screen.focused()
+--						local tag = screen.tags[i]
+--						if tag then
+--						   tag:view_only()
+--						end
+--				  end,
+--				  {description = "view tag #"..i, group = "tag"})
+--	)
+--end
 
 clientbuttons = gears.table.join(
     awful.button({ }, 1, function (c)
