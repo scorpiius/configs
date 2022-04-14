@@ -1,0 +1,7 @@
+/** Basic config file **/
+
+configuration {
+  show-icons:         true;
+  icon-theme:         "Papirus";
+}
+@theme "/home/v/.local/share/rofi/themes/rounded-purple-dark.rasi"
