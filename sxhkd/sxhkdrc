@@ -26,7 +26,10 @@ super + m
       ymp
 
 super + d
-      rofi -modi drun,run -show drun -sidebar-mode -show-icons
+      ./.config/rofi/launchers/ribbon/launcher.sh
+
+super + x
+      ./.config/rofi/powermenu/powermenu.sh
 
 Print
       flameshot gui
