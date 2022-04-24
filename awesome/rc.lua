@@ -55,8 +55,8 @@ awful.layout.layouts = {
     -- awful.layout.suit.spiral.dwindle,
     -- awful.layout.suit.max,
     -- awful.layout.suit.max.fullscreen,
-    -- awful.layout.suit.magnifier,
      awful.layout.suit.corner.nw,
+     awful.layout.suit.magnifier,
     -- awful.layout.suit.corner.ne,
     -- awful.layout.suit.corner.sw,
     -- awful.layout.suit.corner.se,
@@ -359,7 +359,7 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 
 -- }}}
 
-awful.screen.padding(screen[1], { top = 35 })
+awful.screen.padding(screen[1]) --, { top = 25 })
 
 beautiful.useless_gap = 8
 beautiful.border_normal = "#666666"
