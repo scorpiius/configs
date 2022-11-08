@@ -56,7 +56,7 @@ awful.layout.layouts = {
     -- awful.layout.suit.max,
     -- awful.layout.suit.max.fullscreen,
      awful.layout.suit.corner.nw,
-     awful.layout.suit.magnifier,
+    -- awful.layout.suit.magnifier,
     -- awful.layout.suit.corner.ne,
     -- awful.layout.suit.corner.sw,
     -- awful.layout.suit.corner.se,
@@ -281,7 +281,8 @@ awful.rules.rules = {
                      keys = clientkeys,
                      buttons = clientbuttons,
                      screen = awful.screen.preferred,
-                     placement = awful.placement.no_overlap+awful.placement.no_offscreen
+                     placement = awful.placement.no_overlap+awful.placement.no_offscreen,
+		     maximized = false
      }
     },
 { rule = { class = "Xfce4-panel" },

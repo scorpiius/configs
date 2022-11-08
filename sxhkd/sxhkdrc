@@ -1,8 +1,11 @@
 super + Escape
-	pkill -USR1 -x sxhkd
+      pkill -USR1 -x sxhkd
 
 super + w
-      yandex-browser-stable
+      google-chrome
+
+super + o
+      vk_pro obs
 
 super + e
       emacs
@@ -14,22 +17,22 @@ super + s
       steam
 
 super + shift + Return
-      spacefm
+      nautilus -w
 
 super + p
-      picom --config .config/awesome/picom.conf
+      picom --experimental-backends
 
 super + shift + p
       killall picom
 
 super + m
-      ymp
+      electron yandex-music-player/.
 
 super + d
-      ./.config/rofi/launchers/ribbon/launcher.sh
+      rofi -show drun run 
 
 super + x
-      ./.config/rofi/powermenu/powermenu.sh
+      xfce4-session-logout
 
 Print
       flameshot gui
@@ -40,6 +43,8 @@ super + Print
 super + shift + Escape
       xkill
 
+XF86Mail
+      bluetooth off
 
 #XF86MonBrightnessUp
 #      brightnessctl s +10%

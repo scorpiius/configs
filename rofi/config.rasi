@@ -4,4 +4,5 @@ configuration {
   show-icons:         true;
   icon-theme:         "Papirus";
 }
-@theme "/home/v/.local/share/rofi/themes/rounded-purple-dark.rasi"
+//@theme "/home/v/.local/share/rofi/themes/rounded-purple-dark.rasi"
+@theme "/usr/share/rofi/themes/glue_pro_blue.rasi"
